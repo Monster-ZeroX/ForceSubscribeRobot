@@ -1,20 +1,54 @@
 {
-  "name": "Forcesub",
-  "description": "This is a telegram bot writen in python for managing group/channel.",
-  "keywords": [
-    "telegram",
-    "eaglescout",
-    "forcesub"
+    "name": "ForceSubscribeBOT",
+    "description": "Python based bot to Force Users to sub a channel.",
+    "logo": "",
+    "keywords": [
+        "telegram",
+        "pyrogram",
+        "pyrogrambot",
+        "telegram-bot",
+        "ForceSubBot"
+    ],
+    "repository": "https://github.com/Monster-ZeroX/ForceSubscribeRobot",
+    "success_url": "https://t.me/FZBOTS",
+    "env": {
+        "API_HASH": {
+            "description": "You API HASH from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "APP_ID": {
+            "description": "You APP ID from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Bot token, get it from @BotFather.",
+            "value": "",
+            "required": true
+        },
+        "UPDATES_CHANNEL": {
+            "description": "Your bot updates channel username without @ or leave empty",
+            "value": "BioHazard_Bots",
+            "required": false
+        },
+        "SUDO_USERS": {
+            "description": "Sudo users (Goto @Missrose_Bot and send /id to get your id)",
+            "value": "1866542500",
+            "required": false
+        }
+    },
+    "addons": [
+    {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
   ],
-  "repository": "https://github.com/AmineSoukara/ForceSubscribeRobot",
-  "success_url": "https://github.com/AmineSoukara/ForceSubscribeRobot",
-  "website": "https://github.com/AmineSoukara/ForceSubscribeRobot",  
-  "addons": [],
-  "buildpacks": [],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }  
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
 }
